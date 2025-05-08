@@ -76,7 +76,7 @@ docker run --rm --env-file .env -v "$PWD\example.db:/app/example.db" auto-crawle
 You can use Task Scheduler to run the following command daily:
 
 ```powershell
-docker run --rm --env-file C:\path	o\.env auto-crawler
+docker run --rm --env-file "C:\path\to\.env" auto-crawler
 ```
 
 ---
