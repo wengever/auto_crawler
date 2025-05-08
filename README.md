@@ -65,7 +65,7 @@ docker run --rm --env-file .env auto-crawler
 
 > 📦 To persist the database between runs:
 ```bash
-docker run --rm --env-file .env -v %cd%/example.db:/app/example.db auto-crawler
+docker run --rm --env-file .env -v "$PWD\example.db:/app/example.db" auto-crawler
 ```
 
 ---
