@@ -27,4 +27,4 @@ COPY . /app
 
 RUN pip install --no-cache-dir selenium beautifulsoup4 python-dotenv pandas
 
-CMD ["python", "crawl.py"]
+CMD ["python", "main.py"]
