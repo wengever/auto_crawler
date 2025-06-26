@@ -4,13 +4,13 @@ from selenium.webdriver.chrome.options import Options
 
 def use_disable_chrome_annoyings():
     options = Options()
-    options.add_argument('--headless')  # ✅ 無視覺介面，才能跑在 Docker 裡
-    options.add_argument('--no-sandbox')  # ✅ 避免權限問題
-    options.add_argument('--disable-dev-shm-usage')  # ✅ 避免 /dev/shm 空間不足
+    options.add_argument('--headless')  # 無視覺介面，才能跑在 Docker 裡
+    options.add_argument('--no-sandbox')  # 避免權限問題
+    options.add_argument('--disable-dev-shm-usage')  # 避免 /dev/shm 空間不足
     options.add_argument('--disable-notifications')
     options.add_argument('--disable-infobars')
     options.add_argument('--disable-extensions')
-    options.add_argument('--user-data-dir=/tmp/chrome-user-data')  # ✅ 避免使用預設 user 資料夾
+    options.add_argument('--user-data-dir=/tmp/chrome-user-data')  # 避免使用預設 user 資料夾
     options.add_experimental_option("prefs", {
         "profile.managed_default_content_settings.javascript": 2  # 可選擇禁用 JS
     })
