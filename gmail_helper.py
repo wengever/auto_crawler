@@ -23,6 +23,6 @@ def send_gmail(subject, body):
         server.login(GMAIL_USER, GMAIL_PASSWORD)
         server.send_message(msg)
         server.quit()
-        print('📩 成功寄出Gmail通知')
+        print('成功寄出Gmail通知')
     except Exception as e:
-        print(f'❌ Gmail寄信失敗: {str(e)}')
+        print(f'Gmail寄信失敗: {str(e)}')
