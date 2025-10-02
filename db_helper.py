@@ -1,5 +1,5 @@
 import sqlite3
-from gmail_helper import send_gmail  # ✅ 加這行
+from gmail_helper import send_gmail  
 
 def init_db(db_path="example.db"):
     conn = sqlite3.connect(db_path)
@@ -19,14 +19,14 @@ def insert_listing(conn, title, link):
         cursor.execute('INSERT INTO listings (title, link) VALUES (?, ?)', (title, link))
         conn.commit()
 
-        # ✅ 插入成功才寄信
+        # 插入成功才寄信
         subject = "新增591房屋通知"
         body = f"新物件標題：{title}\n連結：{link}"
         send_gmail(subject, body)
 
         return True
     except sqlite3.IntegrityError:
-        print(f'⚠️ 已存在，不重複新增: {title}')
+        print(f'已存在，不重複新增: {title}')
         return False
 
 def get_all_listings(conn):
